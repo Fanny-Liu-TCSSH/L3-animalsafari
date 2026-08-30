@@ -1,0 +1,7 @@
+# Local previews and duplicate demonstration assets are not part of the published website.
+asset-preview.png
+示範作品/
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safari Field Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell" id="gameShell">
+    <a class="map-return" href="../大冒險地圖/index.html">← BACK TO SAFARI MAP <small>← 回到大地圖</small></a>
+    <header class="topbar">
+      <div class="round-info"><span id="roundNo">ROUND 1 / 3</span><strong id="roundName">GIRAFFE TRAIL</strong></div>
+      <div class="game-title"><h1>Safari Field Notes</h1><p>CLOZE READING EXPEDITION</p></div>
+      <div class="stats"><div id="timer" aria-live="polite">TIME : 120</div><div id="progress">NOTES : 0 / 3</div></div>
+    </header>
+
+    <section class="journal-wrap" aria-label="Safari Field Notes 閱讀填空遊戲">
+      <aside class="field-art" aria-hidden="true"><div class="art-image"></div><div class="round-sketch" id="roundSketch"></div></aside>
+      <article class="journal-page">
+        <div class="page-top"><span class="page-code" id="pageCode">FIELD NOTE 01</span><span class="page-stamp" id="pageStamp">WILDLIFE OBSERVATION</span></div>
+        <h2 id="articleTitle">Giraffe Trail</h2>
+        <p class="journal-prompt">Fill in the missing field notes. Read the whole passage before you choose.</p>
+        <div class="reading" id="reading" lang="en"></div>
+        <section class="word-bank-area" aria-labelledby="bankTitle">
+          <div class="bank-heading"><h3 id="bankTitle">EXPEDITION WORD BANK</h3><span>Tap or drag a note card</span></div>
+          <div class="word-bank" id="wordBank"></div>
+        </section>
+        <div class="action-row"><div class="hint-box" id="hintBox" role="status">Choose a card, then choose a blank.</div><button id="checkButton" type="button" disabled>CHECK ANSWERS</button></div>
+      </article>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="overlay" id="overlay" role="dialog" aria-modal="true"><div class="modal-card"><div class="stamp big" id="modalStamp">SAFARI<br>NOTES</div><h2 id="overlayTitle">Ready, Explorer?</h2><p id="overlayText">Recover the missing words from each field journal page.</p><button id="overlayButton" type="button">START ROUND</button></div></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

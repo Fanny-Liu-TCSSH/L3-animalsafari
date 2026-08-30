@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safari Ranger Mission</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <a class="map-return" href="../大冒險地圖/index.html">← BACK TO SAFARI MAP <small>← 回到大地圖</small></a>
+    <header class="topbar">
+      <div class="round-info"><span id="roundNo">ROUND 1 / 3</span><strong id="roundName">ASK THE RANGER</strong></div>
+      <div class="game-title"><h1>Safari Ranger Mission</h1><p>GRAMMAR SURVIVAL CHALLENGE</p></div>
+      <div class="stats"><div id="timer" aria-live="polite">TIME : 120</div><div id="score">MISSION SCORE : 0 / 1600</div></div>
+    </header>
+
+    <button id="compassButton" class="compass-button" type="button" aria-expanded="false">GRAMMAR COMPASS <span>⌄</span></button>
+    <aside id="compassPanel" class="compass-panel hidden" aria-label="Grammar Compass">
+      <h2>GRAMMAR COMPASS</h2><div class="compass-row"><b>ASK</b><p>Starter + wh-word + subject + verb</p><em>Do you know where giraffes sleep?</em></div>
+      <div class="compass-row"><b>REPORT</b><p>subject + be + past participle</p><em>The dolphins were observed at night.</em></div>
+      <div class="compass-row small"><p>Modal: modal + be + p.p.<br>Formal: It + be + p.p. + that-clause</p></div>
+    </aside>
+
+    <section class="mission-board" aria-label="Ranger Mission Board">
+      <div class="board-heading"><span id="boardTag">RANGER DESK</span><h2>RANGER MISSION BOARD</h2><span id="progress">MISSION 1 / 5</span></div>
+      <article class="mission-card">
+        <div id="toolChooser" class="tool-chooser hidden"><h3>CHOOSE YOUR GRAMMAR TOOL</h3><div><button type="button" data-tool="ask">ASK FOR INFORMATION</button><button type="button" data-tool="report">REPORT INFORMATION</button></div><p id="toolFeedback"></p></div>
+        <div id="missionContent">
+          <div class="label">SITUATION</div><p id="situation" class="situation"></p>
+          <div class="label" id="originalLabel">DIRECT QUESTION</div><p id="original" class="original"></p>
+          <p id="instruction" class="instruction">Arrange the field-note strips to complete the ranger report.</p>
+          <div class="label">FIELD NOTE STRIPS</div><div id="chunkBank" class="chunk-bank" aria-label="Sentence chunks"></div>
+          <div class="label">YOUR REPORT</div><div id="answerZone" class="answer-zone" aria-label="Answer zone"><span class="zone-placeholder">Tap the strips in order, or drag them here.</span></div>
+          <div id="hintBox" class="hint-box" role="status">Study the situation, then build the sentence.</div>
+          <div class="action-row"><button id="clearButton" class="secondary" type="button">CLEAR STRIPS</button><button id="submitButton" type="button">SUBMIT REPORT</button></div>
+        </div>
+        <div id="verified" class="verified">VERIFIED</div>
+      </article>
+    </section>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="overlay" class="overlay" role="dialog" aria-modal="true"><div class="modal-card"><div id="modalStamp" class="stamp">RANGER<br>STATION</div><h2 id="overlayTitle">Welcome, Explorer!</h2><p id="overlayText"></p><div id="modalMetrics" class="modal-metrics"></div><div id="modalActions"><button id="overlayButton" type="button">START MISSION</button></div></div></div>
+  </main>
+  <script src="grammar-data.js"></script><script src="game.js"></script>
+</body></html>
